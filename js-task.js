@@ -102,3 +102,6 @@ if (playerAnswer31 === correctAnswer31 && playerAnswer32 === correctAnswer32 && 
 
 let isOnline = true 
 let name = 'Tom'
+let time = 18
+let isBirthday = false
+
