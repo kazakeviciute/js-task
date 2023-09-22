@@ -43,3 +43,29 @@ function monthsToMinutes (monthsNumber) {
 }
 
 monthsToMinutes(2)
+
+
+
+function dalink(dalinys, daliklis) {
+    if ((dalinys % daliklis) === 0) {
+      return `Skaičius ${dalinys} dalinasi iš ${daliklis}.`
+    } else {
+      return `Skaičius ${dalinys} nesidalina iš ${daliklis}. Liekana yra ${dalinys % daliklis}`
+    }
+  }
+  
+  console.log(dalink(10, 5))
+  console.log(dalink(10, 6))
+
+  
+
+  function porinis(zodis) {
+    if (zodis.length % 2) {
+      return 'neporinis'
+    } else {
+      return 'porinis'
+    }
+  }
+  
+  console.log(porinis('zodis'))
+  console.log(porinis('zodis2'))
