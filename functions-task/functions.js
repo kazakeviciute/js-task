@@ -1,71 +1,80 @@
-function getAge(personsAge) {
-    console.log(`${personsAge} žmogaus metai yra ${personsAge * (35 / 5)} šuns metai`)
+function init() {
+  const studentForm = document.querySelector('#student-form')
+  const studentsList = document.querySelector('#students-list')
+  const msgForm = document.querySelector('#msg_field')
+  const spanMsg = document.createElement('span')
+  const rangeSlider = document.querySelector('#it-knowledge')
+  const spanRangeValue = document.querySelector('#range-value')
+  spanRangeValue.textContent = rangeSlider.value
 
-}
-getAge(5)
+  rangeSlider.addEventListener('input', function() {
+    spanRangeValue.textContent = rangeSlider.value
+  })
 
-function booksPerYear (desiredNumber) {
-    console.log('norint perskaityti ' + desiredNumber + ' knygų per metus, vienai knygai perskaityti turėsi ' + Math.round (360 / desiredNumber) + ' dienas')
+  studentForm.addEventListener('submit', function(event) {
+    event.preventDefault()
 
-}
+    const form = event.target
 
-booksPerYear(10)
+    const name = document.querySelector('#name').value
+    const surname = studentForm.querySelector('#surname').value
+    const age = form.querySelector('#age').value
+    // const phone = form.elements.phone.value
+    const phone = form.phone.value
+    const email = form.email.value
+    const itKnowledge= form['it-knowledge'].value
+    // const group = form.querySelector('input[name="group"]:checked').value
+    const group = form.group.value
+    const interests = form.querySelectorAll('input[name="interest"]:checked')
+    
+    spanMsg.textContent = 'Sukurtas studentas (' + name + ' ' + surname + ')'
+    msgForm.append(spanMsg)
+    setTimeout(() => {spanMsg.remove()}, 5000)
 
-function daysToWeeks (daysNumber) {
-    console.log(`${daysNumber} dienos yra ${daysNumber / 7} savaitės`)
-}
+    const studentItem = document.createElement('div')
+    studentItem.classList.add('student-item')
+    
+    const nameElement = document.createElement('h2')
+    nameElement.textContent = `${name} ${surname}`
 
-daysToWeeks(35)
+    const ageElement = document.createElement('p')
+    ageElement.textContent = `Age: ${age}`
 
+    const phoneElement = document.createElement('p')
+    phoneElement.textContent = `Phone: ${phone}`
 
-function daysToYears (daysNumber) {
-    console.log(daysNumber + ' dienos yra ' + Math.round(daysNumber / 365) + ' metai' )
-}
+    const emailElement = document.createElement('p')
+    emailElement.textContent = `Email: ${email}`
 
-daysToYears(365)
+    const itKnowledgeElement = document.createElement('p')
+    itKnowledgeElement.textContent = `IT Knowledge: ${itKnowledge}`
 
-function yearsToHours (yearsNumber) {
-    console.log(`${yearsNumber} metai turi ${yearsNumber * 43800 / 5} valandas`)
-}
+    const groupElement = document.createElement('p')
+    groupElement.textContent = `Group: ${group} gr.`
 
-yearsToHours(5)
+    const interestsWrapper = document.createElement('div')
+    interestsWrapper.classList.add('interests-wrapper')
 
-function monthsToHours (monthsNumber) {
-    console.log(`${monthsNumber} mėnesiai turi ${monthsNumber * 2190 / 3} valandas`)
+    const interestsTitle = document.createElement('h3')
+    interestsTitle.textContent = 'Interests:'
 
-}
+    const interestsList = document.createElement('ul')
 
-monthsToHours(3)
-
-function monthsToMinutes (monthsNumber) {
-    console.log (`${monthsNumber} mėnesiai turi ${monthsNumber * 87600 / 2} minutes`)
-
-}
-
-monthsToMinutes(2)
-
-
-
-function dalink(dalinys, daliklis) {
-    if ((dalinys % daliklis) === 0) {
-      return `Skaičius ${dalinys} dalinasi iš ${daliklis}.`
-    } else {
-      return `Skaičius ${dalinys} nesidalina iš ${daliklis}. Liekana yra ${dalinys % daliklis}`
+    for (let i = 0; i < interests.length; i++) {
+      const interestItem = document.createElement('li')
+      interestItem.textContent = interests[i].value
+      interestsList.append(interestItem)
     }
-  }
-  
-  console.log(dalink(10, 5))
-  console.log(dalink(10, 6))
 
-  
+    interestsWrapper.append(interestsTitle, interestsList)
+    
 
-  function porinis(zodis) {
-    if (zodis.length % 2) {
-      return 'neporinis'
-    } else {
-      return 'porinis'
-    }
-  }
-  
-  console.log(porinis('zodis'))
-  console.log(porinis('zodis2'))
+    studentItem.append(nameElement, ageElement, phoneElement, emailElement, itKnowledgeElement, groupElement, interestsWrapper)
+    studentsList.prepend(studentItem)
+
+    form.reset()
+    spanRangeValue.textContent = rangeSlider.value
+  })
+}
+
+init()

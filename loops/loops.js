@@ -119,7 +119,6 @@
     else if (i%5 === 0){
         console.log('buzz')
     }
-
     else if (i % 7 === 0){
       console.log("biff")
     }
