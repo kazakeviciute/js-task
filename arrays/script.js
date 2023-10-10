@@ -94,3 +94,68 @@ console.log(slicedData28)
 
 
 
+
+
+const newData = [4, 5, -5556, 155, 640, '15x', 6789, -5564, 478, 654, 'obuolys', 789, -51, 55, -222, 0, -357, -56, 'trylika', 444, 7778, 4154, 4751];
+console.log(newData)
+
+newData.shift()
+console.log(newData)
+
+newData.pop()
+console.log(newData)
+
+newData.splice(10, 1)
+console.log(newData)
+
+newData.splice(-2, 1)
+console.log(newData)
+
+newData.splice(1, 1)
+console.log(newData)
+
+newData.splice(6, 2)
+console.log(newData)
+
+newData.splice(-6, 3)
+console.log(newData)
+
+newData.splice(2, 1, 888)
+console.log(newData)
+
+newData.splice(9, 1, 33, 789, 6543)
+console.log(newData)
+
+newData.splice(14, 1, 321, 654, 987)
+console.log(newData)
+
+newData.splice(1, 0, 11)
+console.log(newData)
+
+newData.splice(13, 0, 1)
+console.log(newData)
+
+newData.splice(-1, 0, -1)
+console.log(newData)
+
+newData.unshift(1, 2, 3)
+console.log(newData)
+
+newData.push(-333, -321, -312)
+console.log(newData)
+
+newData.splice(13, 0, 0)
+console.log(newData)
+
+newData.shift()
+console.log(newData)
+
+newData.pop()
+console.log(newData)
+
+newData.unshift('start')
+console.log(newData)
+
+newData.push('end')
+console.log(newData)
+
