@@ -395,5 +395,131 @@ console.log(filteredNums79)
 // 3.76. Gauti tik tekstus (string), kurie turi neporinį simbolių skaičių ir turi raidę s.
 // 3.80. Gauti tik tekstus (string), kurių pirmas simbolis nėra e, kurie turi mažiau simbolių nei 6 ir kurie neprasideda skaičiumi.
 
+let dataArr = ['start', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51, 55, 0, 33, 789, 6543, 1, 'trylika', 444, 321, 654, -1, 987, -333, -321, 'end']
+console.log(dataArr)
+
+function task41a() {
+    for (let i = 0; i < dataArr.length; i++) {
+      if (typeof dataArr[i] === 'number') {
+        console.log(dataArr[i])
+      }
+    }
+  }
+
+
+  function task41b() {
+    dataArr.forEach((item) => {
+      if (typeof item === 'number') {
+        console.log(item)
+      }
+    })
+  }
+
+
+  function task42a() {
+  for (let i = 0; i < dataArr.length; i++) {
+    if (typeof dataArr[i] === 'string') {
+      console.log(dataArr[i])
+    }
+  }
+ }
+
+  function task42b() {
+  dataArr.forEach((item) => {
+    if (typeof item === 'string') {
+      console.log(item)
+    }
+  })
+ }
+
+ function task43a() {
+ for (let i = 0; i < dataArr.length; i++) {
+    if (typeof dataArr[i] === 'number') {
+      console.log(dataArr[i] ** 4)
+    }
+  }
+ }
+
+ function task43b() {
+ dataArr.forEach((item) => {
+    if (typeof item === 'number') {
+      console.log(item ** 4)
+    }
+  })
+ }
+
+
+    function task44a() {
+    for (let i = 0; i < dataArr.length; i++) {
+       if (typeof dataArr[i] === 'number') {
+         console.log(dataArr[i] + 55)
+       }
+     }
+    }
+   
+    function task44b() {
+    dataArr.forEach((item) => {
+       if (typeof item === 'number') {
+         console.log(item + 55)
+       }
+     })
+    }
+
+
+    function task45a() {
+        for (let i = 0; i < dataArr.length; i++) {
+           if (typeof dataArr[i] === 'number') {
+             console.log(dataArr[i] / 2)
+           }
+         }
+        }
+       
+    function task45b() {
+        dataArr.forEach((item) => {
+           if (typeof item === 'number') {
+             console.log(item  / 2)
+           }
+         })
+        }
+   
+
+    function task46a() {
+            for (let i = 0; i < dataArr.length; i++) {
+               if (typeof dataArr[i] === 'number') {
+                 console.log('Number: 3 ' + (dataArr[i]))
+               }
+             }
+            }
+           
+    function task46b() {
+            dataArr.forEach((item) => {
+               if (typeof item === 'number') {
+                 console.log('Number: 3 ' + item)
+               }
+             })
+            }
+       
+
+
+
+// 4.7. Tik skaičius (number tipo duomenis) ir pridėti tekstą su jų pačių indeksais, pvz.:
+//   "Index: 0, Number: 2"
+//   "Index: 1, Number: 3"
+//   "Index: 2, Number: 5"
+//   Ir t.t.
+// 4.8. Tik skaičius (number tipo duomenis) ir juos padauginti iš jų pačių indekso.
+// 4.9. Tik skaičius (number tipo duomenis) ir juos padauginti iš ankstesnio nario, pvz.:
+//   - Pirmo skaičiaus dauginti nereikia.
+//   - Antrą skaičių dauginti iš pirmo.
+//   - Trečią skaičių dauginti iš antro.
+//   - Ketvirta skaičių dauginti iš trečio.
+//   - Penktą skaičių dauginti iš ketvirto.
+//   Ir t.t.
+// 4.10. Tik tuos skaičius (number tipo duomenis), kuriuos padauginus iš 5, atsakymas gaunasi didesnis už 350.
+// 4.11. Tik tekstą (string tipo duomenis) ir prie kiekvieno teksto parašyti kiek simbolių jis turi, pvz. "Start has 5 symbols".
+// 4.12. Tik tekstą (string tipo duomenis), tačiau kiekviena žodžio raidę išskiriant brūkšniu ir paverčiant ją didžiąja raide, pvz.: "S-T-A-R-T".
+// 4.13. Tik tekstą (string tipo duomenis), tačiau kiekviena žodžio pirmą ir trečią raidę pakeičiant brūkšniu (underscore), pvz.: "_t_rt";
+// 4.14. Tik tekstą (string tipo duomenis), tačiau žodį parašant atvirkščiai, pvz.: vietoje "start" parašyti "trats";
+// 4.15. Tik tekstą (string tipo duomenis) ir prie kiekvieno teksto parašyti tarp kokių narių masyve jis yra, pvz.: "Word obuolys is between -5564 and -51 in the array".
 
 
